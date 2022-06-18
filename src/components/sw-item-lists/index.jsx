@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, {useContext } from "react";
 import { DefaultContext } from "../../Context";
 
 export const ItemLists = ({ item, children, type }) => {

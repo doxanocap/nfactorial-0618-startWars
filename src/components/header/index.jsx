@@ -5,6 +5,8 @@ import { ReactComponent as FacebookLogoSVG } from "../../assets/facebook.svg";
 import { ReactComponent as InstagramLogoSVG } from "../../assets/instagram.svg";
 import { ReactComponent as TwitterLogoSVG } from "../../assets/twitter.svg";
 import { ReactComponent as YoutubeLogoSVG } from "../../assets/youtube.svg";
+import TextField from '@mui/material/TextField'; 
+import React, { Component, useContext }  from 'react';
 
 //массив данных ссылок
 const swLinks = [
@@ -50,7 +52,7 @@ export const Header = ({ fan }) => {
       <StarWarsLogoSVG />
       <div className="search-layout">
         <IconSearchSVG className="search-icon" />
-        <input placeholder="Search Star Wars" type="text" />
+        <TextField id="outlined-basic" label="Outlined" variant="outlined" focused sx={{ input: {color: "white"}}} />
         <div style={{ color: "white", paddingTop: "1rem" }}>
           I am fan of: {fan}
         </div>

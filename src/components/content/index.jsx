@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { Component,useState }  from 'react';
+
 
 import swCharacters from "../../data/characters.json";
 import swPlanets from "../../data/planets.json";
@@ -43,6 +44,14 @@ export const Content = ({ handleCreateFan }) => {
             <ItemSpisok>Orbital Period: {planet.orbital_period}</ItemSpisok>
           </ItemLists>
         ))}
+
+      {selector === "Starships" &&
+        swStarships.map((starship) => (
+          <ItemLists key={starship.name} item={starship} type="planets">
+            <ItemSpisok>Model: {starship.model}</ItemSpisok>
+            <ItemSpisok>Manufacturer: {starship.manufacturer}</ItemSpisok>
+          </ItemLists>
+        ))}  
     </div>
   );
 };
